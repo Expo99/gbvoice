@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
-    id          = "com.phonegap.example"
+    id          = "com.Expo.GBvoices"
     versionCode = "1"
     version     = "1.0.0" >
-
-  <name>PhoneGap Example</name>
+  <name>GBVoices</name>
   <description>
-      An example to develop android applications on Adobephonegab.
+      Ten las voces de gunbound en tu celular
   </description>
   <author href="https://build.phonegap.com" email="support@phonegap.com">
-      wildabeast
+      Expo
   </author>
-
   <preference name="orientation" value="landscape" />
   <preference name="fullscreen" value="true" />
-
 </widget> 

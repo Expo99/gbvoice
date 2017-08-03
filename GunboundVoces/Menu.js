@@ -1,14 +1,6 @@
 var Menu=function(game){}
 Menu.prototype={
-	init:function(){
-		this.game.stage.backgroundColor = '#000000';  
-    
-	    this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-	    this.scale.pageAlignHorizontally = true;
-	    this.scale.pageAlignVertically = true;
-
-	    this.game.physics.startSystem(Phaser.Physics.ARCADE);    
-	},
+	init:function(){this.game.stage.backgroundColor = '#000000';this.scale.scaleMode=Phaser.ScaleManager.SHOW_ALL;this.scale.pageAlignHorizontally = true;this.scale.pageAlignVertically = true;this.game.physics.startSystem(Phaser.Physics.ARCADE);},
 	preload:function(){
 		this.load.image('adios','Assets/adios.png');
 		this.load.image('ayuda','Assets/ayuda.png');
@@ -41,28 +33,7 @@ Menu.prototype={
 		this.principiante=this.add.button(700,400,'principiante',function(){this.startSound(9)},this);
 		this.gracias=this.add.button(900,400,'gracias',function(){this.startSound(10)},this);
 	},
-	startSound:function(mark1,mark2){
-		new Sound(this,mark1,mark2);
-	},
+	startSound:function(mark1,mark2){new Sound(this,mark1,mark2);},
 };
-var Sound=function(game,mark1,mark2){
-	this.music=game.add.sound('voces',1,false);
-	this.music.addMarker('gbv',mark1,mark2);
-	this.music.onStop.add(this.Destroy,this);
-	//console.log(this);
-	this.music.play('gbv');
-	//console.log(this);
-	//this.soundeffect=game.musica;
-	//console.log(this.soundeffect);
-	//this.soundeffect.onStop.add(this.stop,this);
-	//delete this.soundeffect;
-	//console.log(this.soundeffect);
-	//this.soundeffect.play(type.toString());
-}
-
-Sound.prototype={
-
-	Destroy:function(){
-		delete this.music;
-	}
-}
+var Sound=function(game,mark1,mark2){this.music=game.add.sound('voces',1,false);this.music.addMarker('gbv',mark1,mark2);this.music.onStop.add(this.Destroy,this);this.music.play('gbv');}
+Sound.prototype={Destroy:function(){delete this.music;}}
