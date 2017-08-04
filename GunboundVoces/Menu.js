@@ -16,22 +16,28 @@ Menu.prototype={
 		this.load.audio('voces','Assets/gbvoice.ogg');
 	},
 	create:function(){
+		var s=2.7;
 		this.background = this.add.tileSprite(0,0,this.world.width, this.world.height,'fondo');
-		this.hola=this.add.button(150,100,'hola',function(){this.startSound(0,0.7)},this);
-		this.hola.scale.setTo(2.5,2.5);
-		this.adios=this.add.button(350,100,'adios',function(){this.startSound(0.8,0.9)},this);
-		this.adios.scale.setTo(2.5,2.5);
-		this.diosmio=this.add.button(550,100,'diosmio',function(){this.startSound(1.43,1.45)},this);
-		this.diosmio.scale.setTo(2.5,2.5);
-		this.ayuda=this.add.button(750,100,'ayuda',function(){this.startSound(2.7,1.35)},this);
-		this.ayuda.scale.setTo(2.5,2.5);
-		this.bien=this.add.button(950,100,'bien',function(){this.startSound(3.9,0.9)},this);
-		this.bien.scale.setTo(2.5,2.5);
-		this.muybien=this.add.button(100,400,'muybien',function(){this.startSound(6)},this);
-		this.buenintento=this.add.button(300,400,'buenintento',function(){this.startSound(7)},this);
-		this.perdon=this.add.button(500,400,'perdon',function(){this.startSound(8)},this);
-		this.principiante=this.add.button(700,400,'principiante',function(){this.startSound(9)},this);
-		this.gracias=this.add.button(900,400,'gracias',function(){this.startSound(10)},this);
+		this.hola=this.add.button(100,100,'hola',function(){this.startSound(0,0.7)},this);
+		this.hola.scale.setTo(s,s);
+		this.adios=this.add.button(330,104,'adios',function(){this.startSound(0.8,0.9)},this);
+		this.adios.scale.setTo(s,s);
+		this.diosmio=this.add.button(530,100,'diosmio',function(){this.startSound(1.43,1.45)},this);
+		this.diosmio.scale.setTo(s,s);
+		this.ayuda=this.add.button(770,100,'ayuda',function(){this.startSound(2.7,1.35)},this);
+		this.ayuda.scale.setTo(s,s);
+		this.bien=this.add.button(980,100,'bien',function(){this.startSound(3.9,0.9)},this);
+		this.bien.scale.setTo(s,s);
+		this.muybien=this.add.button(80,300,'muybien',function(){this.startSound(4.58,1.1)},this);
+		this.muybien.scale.setTo(s,s);
+		this.buenintento=this.add.button(280,300,'buenintento',function(){this.startSound(5.45,1.4)},this);
+		this.buenintento.scale.setTo(s,s);
+		this.perdon=this.add.button(540,300,'perdon',function(){this.startSound(6.8,1)},this);
+		this.perdon.scale.setTo(s,s);
+		this.principiante=this.add.button(730,295,'principiante',function(){this.startSound(7.6,1.8)},this);
+		this.principiante.scale.setTo(s,s);
+		this.gracias=this.add.button(970,315,'gracias',function(){this.startSound(9.3,1.5)},this);
+		this.gracias.scale.setTo(s,s);
 	},
 	startSound:function(mark1,mark2){new Sound(this,mark1,mark2);},
 };
